@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from "react";
 
-// import "./Home.css";
-
 import axios from "axios";
 
 import { Link } from "react-router-dom";
@@ -39,7 +37,11 @@ const Home = () => {
         leBonCoinAPI.offers.map((offer, index) => {
           const regExp = new RegExp(searchResult, "i");
           if (regExp.test(offer.title) || regExp.test(offer.description)) {
-            return <Result {...offer} key={index}></Result>;
+            return (
+              <Link to={`/offer/${offer._id}`}>
+                <Result {...offer} key={index}></Result>
+              </Link>
+            );
           }
         })}
       <Footer></Footer>

@@ -22,6 +22,7 @@ header .post {
   font-weight: 300;
   padding: 0.7rem;
   margin: 0 2rem;
+  border: none;
 }
 header .post > span {
   margin-left: 0.5rem;

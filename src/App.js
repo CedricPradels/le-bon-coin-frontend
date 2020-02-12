@@ -3,22 +3,29 @@ import "./App.css";
 
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
-import Home from "./containers/Offers";
+import Offers from "./containers/Offers";
+import Offer from "./containers/Offer";
 
 import { library } from "@fortawesome/fontawesome-svg-core";
 import {
   faPlusSquare,
   faUser,
-  faSearch
+  faSearch,
+  faShoppingCart
 } from "@fortawesome/free-solid-svg-icons";
-library.add(faPlusSquare, faUser, faSearch);
+library.add(faShoppingCart, faPlusSquare, faUser, faSearch);
 
 const App = () => {
   return (
     <>
-      <Router path="/">
+      <Router>
         <Switch>
-          <Home></Home>
+          <Route path="/offer/:id">
+            <Offer></Offer>
+          </Route>
+          <Route path="/">
+            <Offers></Offers>
+          </Route>
         </Switch>
       </Router>
     </>

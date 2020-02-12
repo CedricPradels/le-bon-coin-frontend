@@ -1,0 +1,97 @@
+.ad {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 2rem;
+}
+
+.ad article {
+  margin-right: 2rem;
+  width: 60rem;
+}
+
+.ad article .imageWrapper {
+  margin-bottom: 2rem;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.ad article .imageWrapper .picture {
+  display: flex;
+  justify-content: center;
+  height: 30rem;
+  background-color: #cad1d9;
+}
+
+.ad article .imageWrapper .picture img {
+  height: 100%;
+  width: 100%;
+  object-fit: scale-down;
+}
+
+.ad article .imageWrapper h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.ad article .imageWrapper .text {
+  margin: 2rem;
+}
+
+.ad article .imageWrapper .text .price {
+  font-size: 1.5rem;
+  color: #f56b2a;
+}
+
+.ad article .imageWrapper .text .date {
+  margin-top: 5rem;
+}
+
+.ad article h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.ad article .description {
+  font-size: 1.5rem;
+}
+
+.ad aside {
+  background-color: white;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.ad aside > div {
+  padding: 2rem;
+  font-size: 1.5rem;
+  border-bottom: 0.2rem solid #f4f6f8;
+}
+
+.ad aside > div h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.ad aside > div .addNumber {
+  color: #538ed7;
+}
+
+.ad aside button {
+  display: flex;
+  color: white;
+  background-color: #f56b2a;
+  padding: 1rem 10rem;
+  border: none;
+  border-radius: 0.5rem;
+  margin: 2rem;
+}
+
+.ad aside button i {
+  margin-right: 1rem;
+}
