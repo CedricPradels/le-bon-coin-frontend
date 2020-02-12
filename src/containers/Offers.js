@@ -31,35 +31,17 @@ const Home = () => {
     getApi();
   }, []);
 
-  const buildSearchResult = () => {
-    let out = [];
-    const regExp = new RegExp(search, "i");
-    for (let i = 0; i < leBonCoinAPI.offers.length; i++) {
-      const { title, description } = leBonCoinAPI.offers[i];
-      if (regExp.test(title) || regExp.test(description)) {
-        out.push(leBonCoinAPI.offers[i]);
-      }
-    }
-    setSearchResult(out);
-  };
-
-  useEffect(() => {
-    !isLoading && buildSearchResult();
-  }, [search]);
-
   return (
     <div className="offers">
       <Header></Header>
-      <Search states={{ search, setSearch }}></Search>
-      {searchResult.map((offer, index) => {
-        const { pictures, title, price, created } = offer;
-        return (
-          <Result
-            offer={{ pictures, title, price, created }}
-            key={index}
-          ></Result>
-        );
-      })}
+      <Search states={{ search, setSearch, setSearchResult }}></Search>
+      {!isLoading &&
+        leBonCoinAPI.offers.map((offer, index) => {
+          const regExp = new RegExp(searchResult, "i");
+          if (regExp.test(offer.title) || regExp.test(offer.description)) {
+            return <Result {...offer} key={index}></Result>;
+          }
+        })}
       <Footer></Footer>
     </div>
   );

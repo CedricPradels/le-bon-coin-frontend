@@ -4,13 +4,14 @@ import "./Search.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Search = props => {
-  const { search, setSearch } = props.states;
+  const { search, setSearch, setSearchResult } = props.states;
 
   return (
     <div className="ellipseSearch">
       <form
         onSubmit={event => {
           event.preventDefault();
+          setSearchResult(search);
           setSearch("");
         }}
       >

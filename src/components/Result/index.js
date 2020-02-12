@@ -1,7 +1,7 @@
 import React from "react";
 import "./Result.css";
 const Result = props => {
-  const { pictures, title, price, created } = props.offer;
+  const { pictures, title, price, created } = props;
   const date = new String(/\d{4}-\d{2}-\d{2}/.exec(created)).replace(/-/g, "/");
   const hour = /\d{2}:\d{2}/.exec(created);
 
