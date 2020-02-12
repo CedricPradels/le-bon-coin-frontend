@@ -1,0 +1,57 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header > div {
+  display: flex;
+  align-items: center;
+}
+
+header img {
+  height: 4rem;
+}
+
+header .post {
+  background-color: #f56b2a;
+  color: white;
+  border-radius: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 300;
+  padding: 0.7rem;
+  margin: 0 2rem;
+}
+header .post > span {
+  margin-left: 0.5rem;
+}
+
+header .search {
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  padding: 1.5rem;
+  background-color: white;
+  border: none;
+  border-bottom: 0.5rem solid #f56b2a;
+  font-size: 2.5rem;
+}
+
+header .search > span {
+  font-size: 1.5rem;
+  margin-left: 2rem;
+}
+
+header .status {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 2rem;
+  padding: 1.5rem;
+  background-color: white;
+  border: none;
+}
+
+header .status > span {
+  font-size: 1.5rem;
+}

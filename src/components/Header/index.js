@@ -1,18 +1,27 @@
 import React from "react";
 
 import "./Header.css";
+import svgAsset from "../../images/leboncoin-logo.svg";
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Header = () => {
   return (
     <header>
-      <img alt="logo le bon coin" src="../../images/leboncoin-logo.png" />
-      <button>
-        <span>+</span> Déposer une annonce
-      </button>
-      <button>Rechercher</button>
-      <button>
-        <pan>Bonhomme</pan>
-        <span>Se Connecter</span>
+      <div>
+        <img alt="logo le bon coin" src={svgAsset} />
+        <button className="post">
+          <FontAwesomeIcon icon="plus-square" />
+          <span> Déposer une annonce</span>
+        </button>
+        <button className="search">
+          <FontAwesomeIcon icon="search" />
+          <span>Rechercher</span>
+        </button>
+      </div>
+      <button className="status">
+        <FontAwesomeIcon icon="user" />
+        <span>Se connecter</span>
       </button>
     </header>
   );
