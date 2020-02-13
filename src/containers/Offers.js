@@ -7,43 +7,60 @@ import { Link } from "react-router-dom";
 import Header from "../components/Header";
 import Search from "../components/Search";
 import Result from "../components/Result";
+import PageNumber from "../components/PageNumbers";
 import Footer from "../components/Footer";
 
 const Home = () => {
   const [leBonCoinAPI, setLeBonCoinAPI] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoadingAPI, setIsLoadingAPI] = useState(true);
   const [searchResult, setSearchResult] = useState([]);
+  const [skipResult, setSkipResult] = useState(0);
+  const [tabPages, setTabPages] = useState([]);
 
   const [search, setSearch] = useState("");
 
-  const getApi = async () => {
+  const getPageResult = async () => {
     const response = await axios.get(
-      "https://leboncoin-api.herokuapp.com/api/offer/with-count"
+      `https://leboncoin-api.herokuapp.com/api/offer/with-count?title=${searchResult}&skip=${skipResult *
+        3}&limit=3`
     );
 
+    const tmpTabPages = [];
+
+    const announesAmount = response.data.count;
+    for (let i = 1; i * 3 < announesAmount; i++) {
+      tmpTabPages.push(i);
+    }
+
+    setTabPages(tmpTabPages);
     setLeBonCoinAPI(response.data);
-    setIsLoading(false);
+    setIsLoadingAPI(false);
   };
 
   useEffect(() => {
-    getApi();
-  }, []);
+    getPageResult();
+  }, [searchResult, skipResult]);
 
   return (
     <div className="offers">
       <Header></Header>
-      <Search states={{ search, setSearch, setSearchResult }}></Search>
-      {!isLoading &&
+      <Search
+        states={{ search, setSearch, setSearchResult, setSkipResult }}
+      ></Search>
+      {!isLoadingAPI &&
         leBonCoinAPI.offers.map((offer, index) => {
           const regExp = new RegExp(searchResult, "i");
           if (regExp.test(offer.title) || regExp.test(offer.description)) {
             return (
-              <Link to={`/offer/${offer._id}`}>
-                <Result {...offer} key={index}></Result>
+              <Link key={index} to={`/offer/${offer._id}`}>
+                <Result {...offer}></Result>
               </Link>
             );
           }
         })}
+
+      <PageNumber states={{ tabPages, skipResult, setSkipResult }}></PageNumber>
+
       <Footer></Footer>
     </div>
   );

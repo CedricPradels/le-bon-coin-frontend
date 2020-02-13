@@ -11,9 +11,11 @@ import {
   faPlusSquare,
   faUser,
   faSearch,
-  faShoppingCart
+  faShoppingCart,
+  faClock,
+  faBell
 } from "@fortawesome/free-solid-svg-icons";
-library.add(faShoppingCart, faPlusSquare, faUser, faSearch);
+library.add(faShoppingCart, faPlusSquare, faUser, faSearch, faClock, faBell);
 
 const App = () => {
   return (

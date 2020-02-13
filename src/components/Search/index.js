@@ -4,7 +4,7 @@ import "./Search.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Search = props => {
-  const { search, setSearch, setSearchResult } = props.states;
+  const { search, setSearch, setSearchResult, setSkipResult } = props.states;
 
   return (
     <div className="ellipseSearch">
@@ -13,6 +13,7 @@ const Search = props => {
           event.preventDefault();
           setSearchResult(search);
           setSearch("");
+          setSkipResult(0);
         }}
       >
         <div className="searchField">

@@ -2,11 +2,15 @@
   display: flex;
   justify-content: center;
   padding: 3rem 0;
+  background: radial-gradient(100% 12rem at 50% 0%, #f56b2a 75%, #fafafa 0%);
+}
+
+.strong {
   background-color: #f56b2a;
 }
 
 .ellipseSearch form {
-  padding: 2rem 10rem;
+  padding: 4rem 10rem;
   display: flex;
   justify-content: space-around;
   background-color: white;

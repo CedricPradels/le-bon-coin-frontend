@@ -1,5 +1,7 @@
 import React from "react";
 
+import { Link } from "react-router-dom";
+
 import "./Header.css";
 import svgAsset from "../../images/leboncoin-logo.svg";
 
@@ -9,7 +11,9 @@ const Header = () => {
   return (
     <header>
       <div>
-        <img alt="logo le bon coin" src={svgAsset} />
+        <Link to="/">
+          <img alt="logo le bon coin" src={svgAsset} />
+        </Link>
         <button className="post">
           <FontAwesomeIcon icon="plus-square" />
           <span> Déposer une annonce</span>

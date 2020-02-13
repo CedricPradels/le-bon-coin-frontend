@@ -9,7 +9,7 @@ const Ad = ({ title, description, pictures, price, creator, created }) => {
       <article>
         <div className="imageWrapper">
           <div className="picture">
-            {pictures && <img alt="item photo" src={pictures[0]} />}
+            {pictures[0] && <img alt="item photo" src={pictures[0]} />}
           </div>
           <div className="text">
             <h2>{title}</h2>
