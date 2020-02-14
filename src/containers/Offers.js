@@ -4,11 +4,9 @@ import axios from "axios";
 
 import { Link } from "react-router-dom";
 
-import Header from "../components/Header";
 import Search from "../components/Search";
 import Result from "../components/Result";
 import PageNumber from "../components/PageNumbers";
-import Footer from "../components/Footer";
 
 const Home = () => {
   const [leBonCoinAPI, setLeBonCoinAPI] = useState([]);
@@ -43,7 +41,6 @@ const Home = () => {
 
   return (
     <div className="offers">
-      <Header></Header>
       <Search
         states={{ search, setSearch, setSearchResult, setSkipResult }}
       ></Search>
@@ -60,8 +57,6 @@ const Home = () => {
         })}
 
       <PageNumber states={{ tabPages, skipResult, setSkipResult }}></PageNumber>
-
-      <Footer></Footer>
     </div>
   );
 };

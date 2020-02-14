@@ -3,8 +3,6 @@ import axios from "axios";
 
 import { useParams } from "react-router-dom";
 
-import Header from "../components/Header";
-import Footer from "../components/Footer";
 import Ad from "../components/Ad";
 
 const Offer = props => {
@@ -24,13 +22,7 @@ const Offer = props => {
   useEffect(() => {
     getOfferData();
   }, []);
-  return (
-    <div>
-      <Header></Header>
-      {!isLoading && <Ad {...offerData}></Ad>}
-      <Footer></Footer>
-    </div>
-  );
+  return <div>{!isLoading && <Ad {...offerData}></Ad>}</div>;
 };
 
 export default Offer;
