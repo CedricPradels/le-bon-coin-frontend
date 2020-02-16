@@ -19,17 +19,21 @@ const Header = props => {
           <img alt="logo le bon coin" src={svgAsset} />
         </Link>
         <button className="post">
-          <FontAwesomeIcon icon="plus-square" />
+          <i>
+            <FontAwesomeIcon icon="plus-square" />
+          </i>
           <span> Déposer une annonce</span>
         </button>
         <button className="search">
-          <FontAwesomeIcon icon="search" />
+          <i>
+            <FontAwesomeIcon icon="search" />
+          </i>
           <span>Rechercher</span>
         </button>
       </div>
 
       <Link
-        to={user === null ? "/" : "/"}
+        to={user === null ? "/signin" : "/"}
         onClick={event => {
           if (user !== null) {
             Cookies.remove("lbc-loged");
@@ -38,7 +42,9 @@ const Header = props => {
         }}
       >
         <button className="status">
-          <FontAwesomeIcon icon="user" />
+          <i>
+            <FontAwesomeIcon icon="user" />
+          </i>
           <span>{user === null ? "Se connecter" : "Se déconnecter"}</span>
         </button>
       </Link>

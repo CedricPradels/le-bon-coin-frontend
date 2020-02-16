@@ -12,8 +12,10 @@ const Ad = ({ title, description, pictures, price, creator, created }) => {
             {pictures[0] && <img alt="item photo" src={pictures[0]} />}
           </div>
           <div className="text">
-            <h2>{title}</h2>
-            <div className="price">{`${price} €`}</div>
+            <div>
+              <h2>{title}</h2>
+              <div className="price">{`${price} €`}</div>
+            </div>
             <div className="date">{created}</div>
           </div>
         </div>

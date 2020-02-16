@@ -5,43 +5,45 @@
   background: radial-gradient(100% 12rem at 50% 0%, #f56b2a 75%, #fafafa 0%);
 }
 
-.strong {
-  background-color: #f56b2a;
-}
-
 .ellipseSearch form {
-  padding: 4rem 10rem;
+  padding: 4.3rem 13rem;
   display: flex;
   justify-content: space-around;
-  background-color: white;
+  background-color: var(--color-white);
   align-items: center;
-  color: gray;
-  border-radius: 0.5rem;
+  color: #8191a0;
+  border-radius: var(--size-border-radius);
+  box-shadow: var(--shadow);
 }
 
 .ellipseSearch form .searchField {
   background-color: #f4f6f7;
-  border-radius: 0.5rem;
-  margin-right: 1rem;
+  border-radius: var(--size-border-radius);
+  margin-right: 2.1rem;
   display: flex;
   align-items: center;
+  padding: 0 1.33rem;
 }
 
 .ellipseSearch form .searchField i {
-  font-size: 1.5rem;
-  padding: 1rem;
+  font-size: 1.75rem;
+  padding-right: 1.32rem;
 }
 
 .ellipseSearch form .searchField input {
   border: none;
   background-color: #f4f6f7;
-  padding: 1rem 0.5rem;
-  width: 20rem;
+  font-size: 1.6rem;
+  padding: 1.3rem;
+  width: 32rem;
 }
 
 .ellipseSearch form button {
-  background-color: #4183d7;
-  color: white;
-  padding: 1rem 5rem;
-  border-radius: 0.5rem;
+  background-color: var(--color-blue);
+  color: var(--color-white);
+  padding: 1.3rem 7rem;
+  border-radius: var(--size-border-radius);
+  box-shadow: var(--shadow);
+  border: none;
+  font-size: 1.6rem;
 }

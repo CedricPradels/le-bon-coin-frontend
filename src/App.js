@@ -48,7 +48,7 @@ const App = () => {
             <NewUser></NewUser>
           </Route>
           <Route path="/signin">
-            <Connexion></Connexion>
+            <Connexion states={{ setUser }}></Connexion>
           </Route>
           <Route path="/offer/:id">
             <Offer></Offer>

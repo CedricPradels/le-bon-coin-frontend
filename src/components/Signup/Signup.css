@@ -1,13 +1,19 @@
 .signup {
   display: flex;
-  padding: 3rem;
-  background-color: white;
-  margin-top: 2rem;
+  padding: 3rem 3.9rem;
+  background-color: var(--color-white);
+  margin: 4.4rem auto;
+  width: 1000px;
+  box-shadow: var(--shadow);
+}
+
+.signup .explains {
+  padding: 0 1.5rem;
 }
 
 .signup .explains h2 {
-  font-size: 2rem;
-  font-weight: 700;
+  font-size: 1.9rem;
+  font-weight: bold;
 }
 
 .signup .explains .reason {
@@ -17,20 +23,20 @@
 }
 
 .signup .explains .reason h3 {
-  font-weight: 700;
-  font-size: 1.3rem;
-  margin-bottom: 1.5rem;
+  font-weight: bold;
+  font-size: 1.4rem;
+  margin-bottom: 1.6rem;
 }
 
 .signup .explains .reason i {
   display: flex;
-  color: #4183d7;
-  font-size: 4rem;
+  color: var(--color-blue);
+  font-size: 2.8rem;
   margin-right: 2rem;
 }
 
 .signup .explains .reason p {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
 }
 
 .signup form {
@@ -39,28 +45,29 @@
 }
 
 .signup form h2 {
-  font-size: 2rem;
-  font-weight: 700;
+  font-size: 1.9rem;
+  font-weight: bold;
   display: flex;
   justify-content: center;
-  padding-bottom: 1rem;
-  border-bottom: 0.3rem solid #f56b2a;
-  margin-bottom: 2rem;
+  padding-bottom: 2.1rem;
+  border-bottom: var(--underline-main);
+  margin-bottom: 3.3rem;
 }
 
 .signup form label {
-  font-weight: 700;
-  margin: 1rem 0;
+  font-weight: bold;
+  margin: 1.9rem 0;
 }
 
 .signup form input {
   padding: 0.7rem;
   font-size: 1.25rem;
-  border-radius: 0.5rem;
+  border: 1px solid #d9e0eb;
+  border-radius: var(--size-border-radius);
 }
 
 .signup form .password {
-  margin: 1rem 0;
+  margin-bottom: 3.5rem;
   display: flex;
   justify-content: space-between;
 }
@@ -74,12 +81,14 @@
 }
 
 .signup form button {
-  color: white;
-  background-color: #4183d7;
+  color: var(--color-white);
+  background-color: var(--color-blue);
   display: flex;
   justify-content: center;
-  border-radius: 0.5rem;
-  margin-top: 1rem;
+  border-radius: var(--size-border-radius);
+  margin-top: 3.4rem;
+  font-size: 1.6rem;
+  font-weight: bold;
   border: none;
-  padding: 1rem 0;
+  padding: 1.2rem 0;
 }
