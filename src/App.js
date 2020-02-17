@@ -55,7 +55,7 @@ const App = () => {
             <Offer></Offer>
           </Route>
           <Route path="/newoffer">
-            <NewOffer></NewOffer>
+            <NewOffer states={{ setUser }}></NewOffer>
           </Route>
           <Route path="/">
             <Offers></Offers>

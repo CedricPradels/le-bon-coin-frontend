@@ -50,13 +50,13 @@
   margin: 2.9rem 0;
 }
 
-.login .signup {
+.login .signupRedirect {
   padding: 2.7rem 7.7rem;
   display: flex;
   flex-direction: column;
 }
 
-.login .signup button {
+.login .signupRedirect button {
   background-color: var(--color-white);
   border: none;
   color: var(--color-blue);
@@ -67,7 +67,7 @@
   border-radius: var(--size-border-radius);
 }
 
-.login .signup label {
+.login .signupRedirect label {
   font-weight: bold;
   font-size: 1.6rem;
   display: flex;

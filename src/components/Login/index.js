@@ -61,7 +61,7 @@ const Login = props => {
         ></input>
         <button type="submit">Se connecter</button>
       </form>
-      <div className="signup">
+      <div className="signupRedirect">
         <label htmlFor="signup">Vous n'avez pas de compte ?</label>
 
         <button id="signup">
