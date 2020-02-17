@@ -48,11 +48,7 @@ const Home = () => {
         leBonCoinAPI.offers.map((offer, index) => {
           const regExp = new RegExp(searchResult, "i");
           if (regExp.test(offer.title) || regExp.test(offer.description)) {
-            return (
-              <Link key={index} to={`/offer/${offer._id}`}>
-                <Result {...offer}></Result>
-              </Link>
-            );
+            return <Result {...offer} key={index}></Result>;
           }
         })}
 

@@ -26,12 +26,14 @@ const Header = props => {
             <span> Déposer une annonce</span>
           </button>
         </Link>
-        <button className="search">
-          <i>
-            <FontAwesomeIcon icon="search" />
-          </i>
-          <span>Rechercher</span>
-        </button>
+        <Link to="/">
+          <button className="search">
+            <i>
+              <FontAwesomeIcon icon="search" />
+            </i>
+            <span>Rechercher</span>
+          </button>
+        </Link>
       </div>
 
       <Link

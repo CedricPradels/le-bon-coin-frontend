@@ -1,8 +1,10 @@
 .pageNumbers {
   display: flex;
+  justify-content: center;
   color: #336699;
   font-size: 1.5rem;
   flex-wrap: wrap;
+  margin: 0 100px;
 }
 
 .pageNumbers li {

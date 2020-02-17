@@ -1,9 +1,14 @@
+.resultContainer {
+  display: flex;
+  justify-content: center;
+  margin: 1.9rem 0;
+}
+
 .result {
   display: flex;
   width: 100rem;
   height: 18rem;
   background-color: var(--color-white);
-  margin: 1.9rem auto;
   border-radius: var(--size-border-radius);
   overflow: hidden;
   box-shadow: var(--shadow);

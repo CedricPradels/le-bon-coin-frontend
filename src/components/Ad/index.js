@@ -1,9 +1,14 @@
 import React from "react";
 import "./Ad.css";
 
+import { format } from "date-fns";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Ad = ({ title, description, pictures, price, creator, created }) => {
+  const date = format(new Date(created), "dd/MM/yyyy");
+  const hour = format(new Date(created), "HH:mm");
+
   return (
     <main className="ad">
       <article>
@@ -16,7 +21,7 @@ const Ad = ({ title, description, pictures, price, creator, created }) => {
               <h2>{title}</h2>
               <div className="price">{`${price} €`}</div>
             </div>
-            <div className="date">{created}</div>
+            <div className="date">{`${date} à ${hour}`}</div>
           </div>
         </div>
         <h3>Description</h3>

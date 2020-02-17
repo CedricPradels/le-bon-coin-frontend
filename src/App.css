@@ -35,24 +35,24 @@ body {
 
 a {
   text-decoration: none;
-  color: black;
+  color: inherit;
 }
 
 a:link {
-  color: black;
+  color: inherit;
 }
 a:visited {
-  color: black;
+  color: inherit;
 }
 a:hover {
-  color: black;
+  color: inherit;
 }
 a:active {
-  color: black;
+  color: inherit;
 }
 
 .modal {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
