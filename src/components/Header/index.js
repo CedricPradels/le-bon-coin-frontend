@@ -18,12 +18,14 @@ const Header = props => {
         <Link to="/">
           <img alt="logo le bon coin" src={svgAsset} />
         </Link>
-        <button className="post">
-          <i>
-            <FontAwesomeIcon icon="plus-square" />
-          </i>
-          <span> Déposer une annonce</span>
-        </button>
+        <Link to="/newoffer">
+          <button className="post">
+            <i>
+              <FontAwesomeIcon icon="plus-square" />
+            </i>
+            <span> Déposer une annonce</span>
+          </button>
+        </Link>
         <button className="search">
           <i>
             <FontAwesomeIcon icon="search" />

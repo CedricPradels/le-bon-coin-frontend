@@ -9,6 +9,7 @@ import Offers from "./containers/Offers";
 import Offer from "./containers/Offer";
 import Connexion from "./containers/Connexion";
 import NewUser from "./containers/NewUser";
+import NewOffer from "./containers/NewOffer";
 
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -52,6 +53,9 @@ const App = () => {
           </Route>
           <Route path="/offer/:id">
             <Offer></Offer>
+          </Route>
+          <Route path="/newoffer">
+            <NewOffer></NewOffer>
           </Route>
           <Route path="/">
             <Offers></Offers>
