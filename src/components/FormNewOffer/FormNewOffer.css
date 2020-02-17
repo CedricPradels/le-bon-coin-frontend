@@ -1,0 +1,7 @@
+.newOffer {
+  display: flex;
+  flex-direction: column;
+  margin: 44px auto;
+  width: 1000px;
+  background-color: white;
+}

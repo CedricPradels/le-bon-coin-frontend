@@ -1,7 +1,9 @@
 import React, { useStates } from "react";
 
+import FormNewOffer from "../components/FormNewOffer";
+
 const NewOffer = () => {
-  return <div>Hello world</div>;
+  return <FormNewOffer></FormNewOffer>;
 };
 
 export default NewOffer;
