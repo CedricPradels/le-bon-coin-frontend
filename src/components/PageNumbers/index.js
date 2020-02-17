@@ -11,7 +11,7 @@ const PageNumbers = props => {
         <Link
           to={"/"}
           onClick={() => {
-            if (skipResult > 1) {
+            if (skipResult >= 1) {
               setSkipResult(skipResult - 1);
             }
           }}
@@ -21,11 +21,14 @@ const PageNumbers = props => {
       </li>
       {tabPages.map((pageNumber, index) => {
         return (
-          <li key={index} className={pageNumber === skipResult && "isActual"}>
+          <li
+            key={index}
+            className={pageNumber === skipResult + 1 && "isActual"}
+          >
             <Link
               to={"/"}
               onClick={() => {
-                setSkipResult(pageNumber);
+                setSkipResult(pageNumber - 1);
               }}
             >
               {pageNumber}
@@ -37,7 +40,7 @@ const PageNumbers = props => {
         <Link
           to={"/"}
           onClick={() => {
-            if (skipResult < tabPages[tabPages.length - 1]) {
+            if (skipResult + 1 < tabPages[tabPages.length - 1]) {
               setSkipResult(skipResult + 1);
             }
           }}

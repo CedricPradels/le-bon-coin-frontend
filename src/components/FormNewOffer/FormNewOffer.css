@@ -3,5 +3,49 @@
   flex-direction: column;
   margin: 44px auto;
   width: 1000px;
-  background-color: white;
+  background-color: var(--color-white);
+  padding: 62px 322px;
+  box-shadow: var(--shadow);
+}
+
+.newOffer h2 {
+  font-size: 1.9rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 2.1rem;
+  border-bottom: var(--underline-main);
+  margin-bottom: 3.3rem;
+}
+
+.newOffer label {
+  font-weight: bold;
+  margin: 1.9rem 0;
+}
+
+.newOffer input {
+  padding: 0.7rem;
+  font-size: 1.25rem;
+  border: 1px solid #d9e0eb;
+  border-radius: var(--size-border-radius);
+}
+
+.newOffer textarea {
+  padding: 0.7rem;
+  font-size: 1.25rem;
+  border: 1px solid #d9e0eb;
+  border-radius: var(--size-border-radius);
+}
+
+.newOffer button {
+  color: var(--color-white);
+  background-color: var(--color-blue);
+  display: flex;
+  justify-content: center;
+  border-radius: var(--size-border-radius);
+  margin-top: 3.4rem;
+  font-size: 1.6rem;
+  font-weight: bold;
+  border: none;
+  padding: 1.2rem 0;
 }
