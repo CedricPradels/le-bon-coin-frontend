@@ -1,12 +1,11 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import "./Signup.css";
-
 import Cookies from "js-cookie";
-
 import axios from "axios";
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+require("dotenv").config();
 
 const Signup = () => {
   let history = useHistory();
@@ -18,10 +17,7 @@ const Signup = () => {
   const [isAccepted, setIsAccepted] = useState(false);
 
   const sendNewUser = async () => {
-    const response = await axios.post(
-      "https://leboncoin-api.herokuapp.com/api/user/sign_up",
-      {}
-    );
+    const response = await axios.post("http://localhost:4000/user/sign_up", {});
   };
 
   return (
@@ -71,7 +67,7 @@ const Signup = () => {
           let response;
           if (password === confirm && isAccepted === true) {
             response = await axios.post(
-              "https://leboncoin-api.herokuapp.com/api/user/sign_up",
+              `${process.env.URL_BACKEND}/user/sign_up`,
               { email: email, username: pseudo, password: password }
             );
             Cookies.set("lbc-loged", response.data._id, { expires: 42 });

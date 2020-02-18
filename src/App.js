@@ -10,6 +10,7 @@ import Offer from "./containers/Offer";
 import Connexion from "./containers/Connexion";
 import NewUser from "./containers/NewUser";
 import NewOffer from "./containers/NewOffer";
+import Payment from "./containers/Payment";
 
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -56,6 +57,9 @@ const App = () => {
           </Route>
           <Route path="/newoffer">
             <NewOffer states={{ setUser }}></NewOffer>
+          </Route>
+          <Route path="/pay">
+            <Payment></Payment>
           </Route>
           <Route path="/">
             <Offers></Offers>

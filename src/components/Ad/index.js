@@ -5,7 +5,7 @@ import { format } from "date-fns";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const Ad = ({ title, description, pictures, price, creator, created }) => {
+const Ad = ({ title, description, picture, price, creator, created }) => {
   const date = format(new Date(created), "dd/MM/yyyy");
   const hour = format(new Date(created), "HH:mm");
 
@@ -14,7 +14,7 @@ const Ad = ({ title, description, pictures, price, creator, created }) => {
       <article>
         <div className="imageWrapper">
           <div className="picture">
-            {pictures[0] && <img alt="item photo" src={pictures[0]} />}
+            {picture && <img alt="item photo" src={picture} />}
           </div>
           <div className="text">
             <div>

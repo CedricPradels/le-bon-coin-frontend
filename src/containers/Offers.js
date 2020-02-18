@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
-
-import axios from "axios";
-
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 import Search from "../components/Search";
 import Result from "../components/Result";
 import PageNumber from "../components/PageNumbers";
+
+require("dotenv").config();
 
 const Home = () => {
   const [leBonCoinAPI, setLeBonCoinAPI] = useState([]);
@@ -18,15 +18,15 @@ const Home = () => {
   const [search, setSearch] = useState("");
 
   const getPageResult = async () => {
+    const limit = 2;
     const response = await axios.get(
-      `https://leboncoin-api.herokuapp.com/api/offer/with-count?title=${searchResult}&skip=${skipResult *
-        3}&limit=3`
+      `http://localhost:4000/offer/with-count?title=${searchResult}&skip=${skipResult}&limit=${limit}`
     );
 
     const tmpTabPages = [];
 
     const announesAmount = response.data.count;
-    for (let i = 1; i * 3 < announesAmount; i++) {
+    for (let i = 1; i * limit <= announesAmount; i++) {
       tmpTabPages.push(i);
     }
 

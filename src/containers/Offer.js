@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
-
 import { useParams } from "react-router-dom";
-
+import axios from "axios";
 import Ad from "../components/Ad";
+
+require("dotenv").config();
 
 const Offer = props => {
   const { id } = useParams();
@@ -12,9 +12,7 @@ const Offer = props => {
   const [offerData, setOfferData] = useState({});
 
   const getOfferData = async () => {
-    const response = await axios.get(
-      `https://leboncoin-api.herokuapp.com/api/offer/${id}`
-    );
+    const response = await axios.get(`http://localhost:4000/offer/${id}`);
     setOfferData(response.data);
     setIsLoading(false);
   };

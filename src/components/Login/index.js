@@ -1,13 +1,11 @@
 import React, { useState } from "react";
-import "./Login.css";
-
-import axios from "axios";
-
-import Cookies from "js-cookie";
-
 import { useHistory, Link } from "react-router-dom";
-
+import Cookies from "js-cookie";
+import axios from "axios";
 import "./Login.css";
+
+require("dotenv").config();
+
 const Login = props => {
   const { setUser } = props.states;
   let history = useHistory();
@@ -19,8 +17,9 @@ const Login = props => {
       <form
         onSubmit={async event => {
           event.preventDefault();
+          console.log(email, " ", password);
           const response = await axios.post(
-            "https://leboncoin-api.herokuapp.com/api/user/log_in",
+            `http://localhost:4000/user/log_in`,
             {
               email,
               password

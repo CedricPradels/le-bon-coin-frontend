@@ -6,7 +6,7 @@ import { format } from "date-fns";
 import { Link } from "react-router-dom";
 
 const Result = props => {
-  const { pictures, title, price, created } = props;
+  const { picture, title, price, created } = props;
   const date = format(new Date(created), "dd/MM/yyyy");
   const hour = format(new Date(created), "HH:mm");
 
@@ -15,7 +15,7 @@ const Result = props => {
       <Link to={`/offer/${props._id}`}>
         <section className="result">
           <div className="imageContainer">
-            {pictures[0] && <img src={pictures[0]} />}
+            {picture && <img src={picture} />}
           </div>
           <div className="resultInformations">
             <div>

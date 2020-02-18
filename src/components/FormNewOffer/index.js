@@ -1,11 +1,10 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
-
 import axios from "axios";
-
 import Cookies from "js-cookie";
-
 import "./FormNewOffer.css";
+
+require("dotenv").config();
 
 const FormNewOffer = () => {
   const [title, setTitle] = useState("");
@@ -31,7 +30,7 @@ const FormNewOffer = () => {
 
         try {
           const response = await axios.post(
-            "https://leboncoin-api.herokuapp.com/api/offer/publish",
+            `http://localhost:4000/offer/publish`,
             formData,
             {
               headers: {
